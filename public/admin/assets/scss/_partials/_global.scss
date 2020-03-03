@@ -1,0 +1,271 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+body{
+    background: #f5f7f9;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    color: #242A31 !important;
+    font-weight: 300 !important;
+    font-size: 14px;
+}
+
+p{
+    font-size: 14px;
+    line-height: 1.34;
+}
+
+.modal{
+    &.show{
+        padding: 6rem 1rem 6rem 5rem;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        .modal-dialog{
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+.btn{
+    font-size: 12px;
+    &:active{
+        box-shadow: none;
+        outline: none;
+    }
+    &:hover{
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus{
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.form-control{
+    &:active{
+        box-shadow: none;
+        outline: none;
+    }
+    &:hover{
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus{
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.btn-default{
+    background: #f5f5f5;
+    color: #000;
+    border-color: #ccc;
+    &:active{
+        background: #f5f5f5;
+        color: #000;
+        border-color: #ccc;
+        box-shadow: none;
+        outline: none;
+    }
+    &:hover{
+        background: #f5f5f5;
+        color: #000;
+        border-color: #ccc;
+        box-shadow: none;
+        outline: none;
+    }
+    &:focus{
+        background: #f5f5f5;
+        color: #000;
+        border-color: #ccc;
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.form-control-lg{
+    font-size: 13px;
+}
+
+.card{
+    margin-bottom: 1rem;
+}
+
+.card-header{
+    background: #fff;
+    border-bottom: 0;
+}
+
+.table{
+    margin-bottom: 0;
+    th{
+        border-top: 0;
+        font-size: 14px;
+    }
+}
+
+.pagination{
+    .page-item{
+        a{
+            color: $primary-color;
+        }
+        &.active{
+            a{
+                background: $primary-color;
+                border-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.card{
+    border: 1px solid #eee;
+    border-radius: 0;
+}
+
+.badge{
+    padding: .35rem 1rem;
+}
+
+.show-sidebar1{
+    transition: all 0.5s ease-in-out;
+    main{
+        transition: all 0.5s ease-in-out;
+    }
+	#sidebar{
+		 width: 240px;
+	}
+	#sidebar-scroll{
+		display: none;
+	}
+	#sidebar-scroll-2{
+		opacity: 1;
+		transition: opacity 1s ease-in-out;
+		.sidebar-nav{
+			#sidebar-navigation{
+				li{
+                    i{
+                        color: $gray-dark;
+                    }
+					#toggle-sidebar{
+						&::after{
+							display: inline-block;
+							width: 0;
+							height: 0;
+							margin-left: 0.255em;
+							vertical-align: 0.15em;
+							content: "";
+							border-top: .3em solid;
+							border-right: .3em solid transparent;
+							border-bottom: 0;
+							border-left: .3em solid transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+	#sidebar-navigation{
+		li>a{
+			height: 48.5px;
+		}
+	}
+	.sidebar-nav {
+		> ul > li > a {
+			i {
+				width: 25px;
+				font-size: 1rem;
+				display: inline-block;
+				color: $sidebar-icons;
+			}
+			#span-long{
+				width: 100%;
+				transition: width 0.5s ease-in-out;
+				transition-delay: 1s;
+			}
+		}
+    }
+    .header{
+        padding-left: 15rem;
+        transition: all 0.5s ease-in-out;
+    }
+	.navbar-brand{
+		width: 225px;
+        transition: all 0.5s ease-in-out;
+	}
+	#main{
+		margin-left: 240px;
+        transition: all 0.5s ease-in-out;
+	}
+	#navbar{
+		width: 239px;
+        transition: all 0.5s ease-in-out;
+		.img-square{
+			display: none;
+		}
+		.img-rectangle{
+			display: block;
+		}
+	}
+	.dropdown-toggle{
+		width: 100% !important;
+		font-size: 1rem;
+		display: inline-block;
+		color: #a6b7bf;
+		margin-left: 0.4rem;
+		&::after{
+			display: none;
+		}
+		#span-long{
+			width: 100%;
+			transition: width 0.5s ease-in-out;
+			transition-delay: 1s;
+		}
+	}
+	@keyframes opacity {
+		from {opacity: 0;}
+    	to {opacity: 1;}
+	}
+}
+
+.dropdown-menu{
+    border: 1px solid #eee;
+}
+
+main{
+    padding: 6rem 1rem 6rem 5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-primary{
+    background: $primary-color;
+    border-color: $primary-color;
+    &:active{
+        box-shadow: none;
+        outline: none;
+        background: $primary-color !important;
+        border-color: $primary-color !important;
+    }
+    &:hover{
+        box-shadow: none;
+        outline: none;
+        background: $primary-color !important;
+        border-color: $primary-color !important;
+    }
+    &:focus{
+        box-shadow: none;
+        outline: none;
+        background: $primary-color !important;
+        border-color: $primary-color !important;
+    }
+}

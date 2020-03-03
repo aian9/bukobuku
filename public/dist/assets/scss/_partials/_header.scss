@@ -1,0 +1,806 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+.header, .header-dashboard{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    top: 0;
+    transition: all 0.2s linear;
+    .header-top{
+        background: darken($primary-color, 10%);
+        padding: 0px;
+        .header-contact{
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+                font-size: 14px;
+                font-family: "Poppins",sans-serif;
+                font-weight: 400;
+                color: #fff;
+                text-transform: capitalize;
+                i{
+                    vertical-align: middle;
+                }
+                a{
+                    font-weight: 300;
+                    padding-left: 5px;
+                    line-height: 50px;
+                    opacity: 0.7;
+                    transition: opacity 0.2s linear;
+                    color: #fff;
+                    &:hover{
+                        opacity: 1;
+                        transition: opacity 0.2s linear;
+                    }
+                }
+            }
+        }
+        .header-social{
+            border-left: 1px solid rgba($color: $white, $alpha: 0.3);
+            padding-left: 22px;
+            margin-left: 40px;
+            text-align: right;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+                margin: 0px 0px 0px 15px;
+                a{
+                    font-size: 12px;
+                    color: #fff;
+                    line-height: 50px;
+                    opacity: 0.7;
+                    transition: opacity 0.2s linear;
+                    &:hover{
+                        opacity: 1;
+                        transition: opacity 0.2s linear;
+                    }
+                }
+            }
+        }
+        .header-top-menu{
+            text-align: right;
+            margin-bottom: 0px;
+            padding-left: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+                a{
+                    font-size: 12px;
+                    font-family: "Poppins",sans-serif;
+                    font-weight: 300;
+                    color: #fff;
+                    transition: opacity 0.2s linear;
+                    line-height: 50px;
+                    opacity: 0.7;
+                    &:hover{
+                        opacity: 1;
+                        transition: opacity 0.2s linear;
+                    }
+                }
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: 11px;
+                    background: #8e6bf7;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0px 17px 0px 15px;
+                }
+                &:first-child(1){
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .navbar{
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding: 0;
+        @media (max-width: 991px){
+            padding: 15px 0px;
+        }
+        .container{
+            position: relative;
+            @media (max-width: 991px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .navbar-brand{
+                display: inline-block;
+                padding-top: .3125rem;
+                padding-bottom: .3125rem;
+                margin-right: 1rem;
+                font-size: 1.25rem;
+                line-height: inherit;
+                white-space: nowrap;
+                img{
+                    width: 120px;
+                    @include device(mobile){
+                        width: 80px;
+                    }
+                    &+img{
+                        display: none;
+                    }
+                }
+            }
+            .navbar-toggler{
+                padding: 0px;
+                margin-left: 20px;
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                @media (min-width: 992px){
+                    display: none;
+                }
+                .menu-toggle{
+                    width: 22px;
+                    height: 22px;
+                    position: relative;
+                    cursor: pointer;
+                    display: block;
+                    .hamburger{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        span{
+                            width: 100%;
+                            height: 2px;
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            margin: 4px 0;
+                            display: block;
+                            background: #000;
+                            border-radius: 3px;
+                            -webkit-transition: .2s ease-in-out;
+                            transition: .2s ease-in-out;
+                            &:nth-child(1){
+                                transition-delay: .3s;
+                            }
+                            &:nth-child(2){
+                                transition-delay: .4s;
+                            }
+                            &:nth-child(3){
+                                transition-delay: .5s;
+                            }
+                        }
+                    }
+                    .hamburger-cross{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        transform: rotate(45deg);
+                        display: block;
+                        span{
+                            display: block;
+                            background: #fff;
+                            border-radius: 3px;
+                            -webkit-transition: .2s ease-in-out;
+                            transition: .2s ease-in-out;
+                            &:nth-child(1){
+                                height: 0%;
+                                transition-delay: 0s;
+                                width: 2px;
+                                position: absolute;
+                                top: 0;
+                                left: 10px;
+                            }
+                            &:nth-child(2){
+                                width: 0%;
+                                transition-delay: .2s;
+                                height: 2px;
+                                position: absolute;
+                                left: 0;
+                                top: 10px;
+                            }
+                        }
+                    }
+                }
+                &:not(:disabled){
+                    cursor: pointer;
+                }
+                &:not(.disabled){
+                    cursor: pointer;
+                }
+            }
+            .navbar-collapse{
+                @media (max-width: 991px){
+                    max-height: 400px;
+                    overflow-y: scroll;
+                    margin-left: -20px;
+                    margin-right: -20px;
+                }
+                .navbar-nav{
+                    margin-left: auto!important;
+                    &.menu{
+                        @media (max-width: 991px){
+                            padding: 10px 30px;
+                            background: #fff;
+                            margin-top: 20px;
+                        }
+                        .nav-item{
+                            position: relative;
+                            padding-bottom: 35px;
+                            padding-top: 35px;
+                            @media (max-width: 991px){
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                            &.submenu{
+                                .dropdown-menu{
+                                    transform: translateY(20px);
+                                    transition: all 0.3s ease-in;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    display: block;
+                                    margin: 0px;
+                                    border: 0px;
+                                    margin: 0px;
+                                    border-radius: 0px;
+                                    left: 0;
+                                    min-width: 200px;
+                                    background: transparent;
+                                    box-shadow: 0px 15px 27px 0px rgba(14,0,40,0.05);
+                                    @media (max-width: 991px){
+                                        box-shadow: none;
+                                        -webkit-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -moz-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -o-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        max-height: 0;
+                                        display: block;
+                                        overflow: hidden;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        padding: 0px;
+                                        margin: 0px;
+                                    }
+                                    .nav-item{
+                                        display: block;
+                                        width: 100%;
+                                        margin-right: 0px;
+                                        padding: 0px 40px;
+                                        background: #fff;
+                                        @media (max-width: 991px){
+                                            padding: 0px 25px;
+                                        }
+                                        .nav-link{
+                                            padding: 0px;
+                                            white-space: nowrap;
+                                            font: 400 14px/34px "Poppins",sans-serif;
+                                            color: #051441;
+                                            transition: color 0.2s linear;
+                                        }
+                                        &:first-child{
+                                            padding-top: 25px;
+                                            @media (max-width: 991px){
+                                                padding-top: 12px;
+                                            }
+                                        }
+                                        &:last-child{
+                                            padding-bottom: 25px;
+                                            margin-bottom: -8px;
+                                        }
+                                    }
+                                }
+
+                                &.mega-menu{
+                                    position: static;
+                                    .dropdown-menu{
+                                        display: flex;
+                                        min-width: 200px;
+                                        list-style: none;
+                                        box-shadow: 0px 15px 27px 0px rgba(14,0,40,0.05);
+                                        left: 0;
+                                        right: 0;
+                                        transition: all 300ms linear 0s;
+                                        background: #fff;
+                                        @media (max-width: 991px){
+                                            margin-top: 10px;
+                                            box-shadow: none;
+                                        }
+                                        .nav-item{
+                                            padding-top: 40px;
+                                            padding-bottom: 40px;
+                                            margin-bottom: -10px;
+                                            width: 25%;
+                                            .nav-link{
+                                                font: 500 18px "Poppins",sans-serif;
+                                                color: #051441;
+                                            }
+                                            .dropdown-menu{
+                                                left: 0;
+                                                position: relative;
+                                                transform: translateY(0);
+                                                box-shadow: none;
+                                                padding: 0px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                .nav-item{
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                    padding: 5px 0;
+                                                    white-space: normal;
+                                                    .nav-link{
+                                                        padding: 0px;
+                                                        white-space: nowrap;
+                                                        font: 400 14px/34px "Poppins",sans-serif;
+                                                        color: #051441;
+                                                        transition: color 0.2s linear;
+                                                    }
+                                                    &:first-child{
+                                                        padding-top: 20px;
+                                                    }
+                                                    &:last-child{
+                                                        padding-bottom: 0px;
+                                                        margin-bottom: 0px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .nav-link{
+                                color: #000;
+                                padding: .5rem 1.5rem;
+                                @media (max-width: 991px){
+                                    color: $primary-color;
+                                }
+                                &.dropdown-toggle{
+                                    &::before{
+                                        content: "";
+                                        width: 0;
+                                        height: 1px;
+                                        background: #fff;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: auto;
+                                        right: 0;
+                                        transition: all 0.2s linear;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                padding-bottom: 20px;
+                            }
+                            &.active{
+                                .nav-link{
+                                    color: #000;
+                                    @media (max-width: 991px){
+                                        color: #051441;
+                                    }
+                                    &::before{
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        background: #fff;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: auto;
+                                        right: 0;
+                                        transition: all 0.2s linear;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                .nav-link{
+                                    .dropdown-toggle{
+                                        &::before{
+                                            width: 100%;
+                                            left: 0;
+                                            right: auto;
+                                        }
+                                    }
+                                }
+                                .dropdown-menu{
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-header{
+                background: #ffb500 none repeat scroll 0 0;
+                border: 0;
+                border-radius: 5px;
+                -webkit-box-shadow: 0 0 20px rgba(#ed8202, .5);
+                box-shadow: 0 0 20px rgba(#ed8202, .5);
+                color: #ffffff;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                padding: 10px 25px;
+                text-align: center;
+                text-transform: capitalize;
+                margin-left: 15px;
+            }
+        }
+    }
+    &.fixed-white{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        -webkit-box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
+        box-shadow: 0px 4px 6px 0px rgba(12, 0, 46, 0.06);
+        .container{
+            position: relative;
+            @media (max-width: 991px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .navbar-brand{
+                display: inline-block;
+                padding-top: .3125rem;
+                padding-bottom: .3125rem;
+                margin-right: 1rem;
+                font-size: 1.25rem;
+                line-height: inherit;
+                white-space: nowrap;
+                img{
+                    display: none;
+                    &+img{
+                        display: block;
+                    }
+                }
+            }
+            .navbar-toggler{
+                padding: 0px;
+                margin-left: 20px;
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                @media (min-width: 992px){
+                    display: none;
+                }
+                .menu-toggle{
+                    width: 22px;
+                    height: 22px;
+                    position: relative;
+                    cursor: pointer;
+                    display: block;
+                    .hamburger{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        span{
+                            width: 100%;
+                            height: 2px;
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            margin: 4px 0;
+                            display: block;
+                            background: $primary-color;
+                            border-radius: 3px;
+                            -webkit-transition: .2s ease-in-out;
+                            transition: .2s ease-in-out;
+                            &:nth-child(1){
+                                transition-delay: .3s;
+                            }
+                            &:nth-child(2){
+                                transition-delay: .4s;
+                            }
+                            &:nth-child(3){
+                                transition-delay: .5s;
+                            }
+                        }
+                    }
+                    .hamburger-cross{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        transform: rotate(45deg);
+                        display: block;
+                        span{
+                            display: block;
+                            background: $primary-color;
+                            border-radius: 3px;
+                            -webkit-transition: .2s ease-in-out;
+                            transition: .2s ease-in-out;
+                            &:nth-child(1){
+                                height: 0%;
+                                transition-delay: 0s;
+                                width: 2px;
+                                position: absolute;
+                                top: 0;
+                                left: 10px;
+                            }
+                            &:nth-child(2){
+                                width: 0%;
+                                transition-delay: .2s;
+                                height: 2px;
+                                position: absolute;
+                                left: 0;
+                                top: 10px;
+                            }
+                        }
+                    }
+                }
+                &:not(:disabled){
+                    cursor: pointer;
+                }
+                &:not(.disabled){
+                    cursor: pointer;
+                }
+            }
+            .navbar-collapse{
+                @media (max-width: 991px){
+                    max-height: 400px;
+                    overflow-y: scroll;
+                    margin-left: -20px;
+                    margin-right: -20px;
+                }
+                .navbar-nav{
+                    margin-left: auto!important;
+                    &.menu{
+                        @media (max-width: 991px){
+                            padding: 10px 30px;
+                            background: #fff;
+                            margin-top: 20px;
+                        }
+                        .nav-item{
+                            position: relative;
+                            padding-bottom: 35px;
+                            padding-top: 35px;
+                            @media (max-width: 991px){
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                            &.submenu{
+                                .dropdown-menu{
+                                    transform: translateY(20px);
+                                    transition: all 0.3s ease-in;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    display: block;
+                                    margin: 0px;
+                                    border: 0px;
+                                    margin: 0px;
+                                    border-radius: 0px;
+                                    left: 0;
+                                    min-width: 200px;
+                                    background: transparent;
+                                    box-shadow: 0px 15px 27px 0px rgba(14,0,40,0.05);
+                                    @media (max-width: 991px){
+                                        box-shadow: none;
+                                        -webkit-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -moz-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -ms-transition: max-height 0.3s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        -o-transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        transition: max-height 0.5s, opacity 0.2s 0.1s, visibility 0s 0s;
+                                        max-height: 0;
+                                        display: block;
+                                        overflow: hidden;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        padding: 0px;
+                                        margin: 0px;
+                                    }
+                                    .nav-item{
+                                        display: block;
+                                        width: 100%;
+                                        margin-right: 0px;
+                                        padding: 0px 40px;
+                                        background: #fff;
+                                        @media (max-width: 991px){
+                                            padding: 0px 25px;
+                                        }
+                                        .nav-link{
+                                            padding: 0px;
+                                            white-space: nowrap;
+                                            font: 400 14px/34px "Poppins",sans-serif;
+                                            color: #051441;
+                                            transition: color 0.2s linear;
+                                        }
+                                        &:first-child{
+                                            padding-top: 25px;
+                                            @media (max-width: 991px){
+                                                padding-top: 12px;
+                                            }
+                                        }
+                                        &:last-child{
+                                            padding-bottom: 25px;
+                                            margin-bottom: -8px;
+                                        }
+                                    }
+                                }
+
+                                &.mega-menu{
+                                    position: static;
+                                    .dropdown-menu{
+                                        display: flex;
+                                        min-width: 200px;
+                                        list-style: none;
+                                        box-shadow: 0px 15px 27px 0px rgba(14,0,40,0.05);
+                                        left: 0;
+                                        right: 0;
+                                        transition: all 300ms linear 0s;
+                                        background: #fff;
+                                        @media (max-width: 991px){
+                                            margin-top: 10px;
+                                            box-shadow: none;
+                                        }
+                                        .nav-item{
+                                            padding-top: 40px;
+                                            padding-bottom: 40px;
+                                            margin-bottom: -10px;
+                                            width: 25%;
+                                            .nav-link{
+                                                font: 500 18px "Poppins",sans-serif;
+                                                color: #051441;
+                                            }
+                                            .dropdown-menu{
+                                                left: 0;
+                                                position: relative;
+                                                transform: translateY(0);
+                                                box-shadow: none;
+                                                padding: 0px;
+                                                display: flex;
+                                                flex-direction: column;
+                                                .nav-item{
+                                                    padding-left: 0px;
+                                                    padding-right: 0px;
+                                                    padding: 5px 0;
+                                                    white-space: normal;
+                                                    .nav-link{
+                                                        padding: 0px;
+                                                        white-space: nowrap;
+                                                        font: 400 14px/34px "Poppins",sans-serif;
+                                                        color: #051441;
+                                                        transition: color 0.2s linear;
+                                                    }
+                                                    &:first-child{
+                                                        padding-top: 20px;
+                                                    }
+                                                    &:last-child{
+                                                        padding-bottom: 0px;
+                                                        margin-bottom: 0px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .nav-link{
+                                color: #051441;
+                                @media (max-width: 991px){
+                                    color: $primary-color;
+                                }
+                                &.dropdown-toggle{
+                                    &::before{
+                                        content: "";
+                                        width: 0;
+                                        height: 1px;
+                                        background: $white;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: auto;
+                                        right: 0;
+                                        transition: all 0.2s linear;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                padding-bottom: 20px;
+                            }
+                            &.active{
+                                .nav-link{
+                                    color: #051441;
+                                    @media (max-width: 991px){
+                                        color: #051441;
+                                    }
+                                    &.dropdown-toggle{
+                                        &::before{
+                                            content: "";
+                                            width: 100%;
+                                            height: 1px;
+                                            background: #051441;
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: auto;
+                                            right: 0;
+                                            transition: all 0.2s linear;
+                                        }
+                                    }
+                                    &::before{
+                                        content: "";
+                                        width: 0%;
+                                        height: 1px;
+                                        background: #051441;
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: auto;
+                                        right: 0;
+                                        transition: all 0.2s linear;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                .nav-link{
+                                    .dropdown-toggle{
+                                        &::before{
+                                            width: 100% !important;
+                                            left: 0;
+                                            right: auto;
+                                        }
+                                    }
+                                }
+                                .dropdown-menu{
+                                    opacity: 1;
+                                    transform: translateY(0);
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn{
+                overflow: hidden;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 14px;
+                font-family: "Poppins",sans-serif;
+                z-index: 1;
+                cursor: pointer;
+                transition: all 0.3s linear;
+                &.btn-primary{
+                    font: 500 14px/47px "Poppins",sans-serif;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    border: 1px solid $primary-color;
+                    color: $primary-color;
+                    box-shadow: none;
+                    padding: 0px 23px;
+                    transform: perspective(1px) translateZ(0);
+                    transition-property: color;
+                    transition: all 0.3s ease;
+                    min-width: 135px;
+                    text-align: center;
+                    margin-left: 40px;
+                    &:hover{
+                        background: $primary-color;
+                        color: $white;
+                        border: 1px solid $white;
+                        box-shadow: none;
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}

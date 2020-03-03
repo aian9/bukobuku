@@ -1,0 +1,68 @@
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author         Alfian Imanuddin
+ * @copyright      Copyright (c) http://alfianimanuddin.com 
+*/
+
+footer{
+	.footer-top{
+		background: #fff;
+		padding: 4rem 8rem;
+		@include device(mobile){
+			padding: 0 2rem 2rem;
+		}
+		.company-profile{
+			width: 90%;
+			@include device(mobile){
+				margin-bottom: 2rem;
+			}
+			img{
+				width: 200px;
+				margin-bottom: 1rem;
+			}
+			h6{
+				font-weight: 300;
+			}
+			.social-media{
+				width: 40%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				a{
+					font-size: 25px;
+				}
+			}
+		}
+		.footer-menu{
+			padding-left: 0;
+			margin-bottom: 0;
+			.footer-menu-list{
+				padding: .35rem 0;
+				font-size: 15px;
+                list-style: none;
+			}
+		}
+	}
+	.footer-bottom{
+		background: #1b3359;
+		padding: 1.5rem 8rem;
+		color: #fff;
+		@include device(mobile){
+			padding: 2rem;
+		}
+		a{
+			color: #fff;
+		}
+		.copyright{
+			text-align: right;
+			@include device(mobile){
+				text-align: center;
+				padding-top: 1.5rem;
+				margin-top: 1.5rem;
+				border-top: 1px solid rgba(250, 250, 250, 0.3);
+			}
+		}
+	}
+}
