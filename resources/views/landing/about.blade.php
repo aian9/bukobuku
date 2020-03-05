@@ -1,6 +1,6 @@
 @extends('landing.dashboard')
     
-@section('title',"Sapaguru - Education Technology Startup")
+@section('title',"BUKOBUKU - Belajar Cepat, Belajar Hemat")
 
 @section('css')
     <style>
@@ -29,14 +29,14 @@
             <div class="text-center">
                 <div class="title text-center" style="padding-top: 95px;">
                     <h3>
-                        Tentang Sapaguru
+                        Tentang BUKOBUKU
                     </h3>
                 </div>
                 <p>
-                    Sapaguru adalah perusahaan teknologi dalam bidang pendidikan, kami memiliki layanan dengan jangkauan seluruh Indonesia, yang berpusat di Surabaya Jawa Timur. Didirikan oleh mahasiswa Institut Teknologi Sepuluh Nopember untuk membantu orang tua mencari guru privat paling tepat untuk anaknya, sekaligus membantu mahasiswa/guru privat mendapatkan penghasilan tambahan dengan menjadi guru privat di Sapaguru.
+                    BUKOBUKU adalah perusahaan teknologi dalam bidang pendidikan, kami memiliki layanan dengan jangkauan seluruh Indonesia, yang berpusat di Surabaya Jawa Timur. Didirikan oleh mahasiswa Institut Teknologi Sepuluh Nopember untuk membantu orang tua mencari guru privat paling tepat untuk anaknya, sekaligus membantu mahasiswa/guru privat mendapatkan penghasilan tambahan dengan menjadi guru privat di Sapaguru.
                 </p>
                 <p>
-                    Sapaguru berkomitmen akan terus melakukan perbaikan sistem dan layanan demi kenyamanan belajar siswa Indonesia. Sapaguru selalu mengedepankan pemahaman siswa dalam belajar dibandingkan hanya sekadar menghafal dengan penyelesaian cepat, karena kami meyakini pembekalan pemahaman akan lebih penting untuk jenjang yang lebih tinggi dibandingkan dengan metode menghafal instan namun melupakan pola pikir dasar dalam belajar.
+                    BUKOBUKU berkomitmen akan terus melakukan perbaikan sistem dan layanan demi kenyamanan belajar siswa Indonesia. Sapaguru selalu mengedepankan pemahaman siswa dalam belajar dibandingkan hanya sekadar menghafal dengan penyelesaian cepat, karena kami meyakini pembekalan pemahaman akan lebih penting untuk jenjang yang lebih tinggi dibandingkan dengan metode menghafal instan namun melupakan pola pikir dasar dalam belajar.
                 </p>
             </div>
         </section>
@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="title text-center">
                     <h3>
-                        Tim Sapaguru
+                        Tim BUKOBUKU
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci iure omnis quia molestiae similique est!

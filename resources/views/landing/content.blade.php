@@ -1,6 +1,6 @@
 @extends('landing.dashboard')
 	
-@section('title',"Sapaguru - Education Technology Startup")
+@section('title',"BUKOBUKU - Belajar Cepat, Belajar Hemat")
 
 @section('css')
     <style>
@@ -32,10 +32,13 @@
             <div class="welcome-area">
                 <div class="container">
                     <div class="row align-items-center">
+                        <div class="col-md-5 col-lg-6 col-sm-12 col-xs-12" style="margin-top:10px;">
+                            <img src="{{ asset('dist/assets/img/banner-image.png') }}" class="img-fluid px-3">
+                        </div>
                         <div class="col-md-7 col-lg-6 col-sm-12 col-xs-12">
                             <div class="welcome-text">
                                 <h1>
-                                    SapaGuru
+                                    BUKOBUKU
                                 </h1>
                                 <p>
                                     @if(!Auth::user())
@@ -56,9 +59,6 @@
                                 </a>
                                 @endif
                             </div>
-                        </div>
-                        <div class="col-md-5 col-lg-6 col-sm-12 col-xs-12" style="margin-top:10px;">
-                            <img src="{{ asset('dist/assets/img/banner-image.png') }}" class="img-fluid px-3" alt="from: http://www.freepik.com Designed by pikisuperstar / Freepik">
                         </div>
                     </div>
                 </div>
@@ -81,13 +81,13 @@
                     Belajar dan mengajari adalah hal yang perlu dilakukan oleh semua orang untuk mengembangkan diri menjadi lebih baik. 
                 </p>
                 <p>
-                    Sapaguru hadir bersama guru, pelajar, dan masyarakat untuk membantu pendidikan yang lebih maju dan merata dengan menghadirkan teknologi.
+                    BUKOBUKU hadir bersama guru, pelajar, dan masyarakat untuk membantu pendidikan yang lebih maju dan merata dengan menghadirkan teknologi.
                 </p>
                 <p>
-                    Bersama Sapaguru kami mengajak seluruh elemen terdidik di Indonesia, melakukan sharing ilmu dan pengalaman, kami meyakini pendidikan akan lebih cerah dan indah ketika setaip orang mau berbagi pengetahuan, tanpa hirarki yang mengikat, dan sebagai seorang teman bagi pelajar.
+                    Bersama BUKOBUKU kami mengajak seluruh elemen terdidik di Indonesia, melakukan sharing ilmu dan pengalaman, kami meyakini pendidikan akan lebih cerah dan indah ketika setaip orang mau berbagi pengetahuan, tanpa hirarki yang mengikat, dan sebagai seorang teman bagi pelajar.
                 </p>
                 <p>
-                    Menjadi pengajar di sapaguru artinya menjadi pahlawan kemajuan Indonesia melalui generasi yang lebih baik.
+                    Menjadi pengajar di BUKOBUKU artinya menjadi pahlawan kemajuan Indonesia melalui generasi yang lebih baik.
                 </p>
                 @if(!Auth::user())
                 <center>

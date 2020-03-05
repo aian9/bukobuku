@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
-    <meta name="description" content="Sapaguru merupakan salah satu perusahaan  di Indonesia 
+    <meta name="description" content="BUKOBUKU merupakan salah satu perusahaan  di Indonesia 
     yang berfokus pada layanan berbasis pendidikan
      dan telah memiliki lebih dari 6 juta pengguna serta telah mengelola lebih 
      dari 150.000 guru yang menawarkan jasa di lebih dari 100 bidang pelajaran">
@@ -50,26 +50,26 @@
             <div class="animation-preloader">
                 <div class="spinner"></div>
                 <div class="txt-loading">
-                    <span data-text-preloader="S" class="letters-loading">
-                        S
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
-                    <span data-text-preloader="P" class="letters-loading">
-                        P
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
-                    <span data-text-preloader="G" class="letters-loading">
-                        G
+                    <span data-text-preloader="B" class="letters-loading">
+                        B
                     </span>
                     <span data-text-preloader="U" class="letters-loading">
                         U
                     </span>
-                    <span data-text-preloader="R" class="letters-loading">
-                        R
+                    <span data-text-preloader="K" class="letters-loading">
+                        K
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="B" class="letters-loading">
+                        B
+                    </span>
+                    <span data-text-preloader="U" class="letters-loading">
+                        U
+                    </span>
+                    <span data-text-preloader="K" class="letters-loading">
+                        K
                     </span>
                     <span data-text-preloader="U" class="letters-loading">
                         U
@@ -100,8 +100,8 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="{{route('dashboard')}}">
-                    <img src="{{asset('dist/assets/img/logo/logo-small.png') }}" srcset="{{ asset('dist/assets/img/logo/logo-small.png 2x') }}" alt="logo">
-                    <img src="{{asset('dist/assets/img/logo/logo-small.png') }}" srcset="{{ asset('dist/assets/img/logo/logo-small.png 2x') }}" alt="">
+                    <img src="{{asset('dist/assets/img/logo/logo2.png') }}" srcset="{{ asset('dist/assets/img/logo/logo2.png 2x') }}" alt="logo">
+                    <img src="{{asset('dist/assets/img/logo/logo2.png') }}" srcset="{{ asset('dist/assets/img/logo/logo2.png 2x') }}" alt="">
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

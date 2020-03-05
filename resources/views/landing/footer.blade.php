@@ -13,7 +13,7 @@
                             <h6>
                                 Kota SBY, Jawa Timur 60111
                             </h6>
-                            <h6>
+                            <!--<h6>
                                 <i class="fas fa-envelope mr-1"></i>
                                 cs@sapaguru.com
                             </h6>
@@ -26,7 +26,7 @@
                                     <i class="fas fa-envelope mr-1"></i>
                                     cs@sapaguru.com
                                 </li>
-                            </ul> --}}
+                            </ul> --}}-->
                             <div class="social-media mt-2">
                                 <a href="https://www.instagram.com/sapaguru/">
                                     <i class="fab fa-instagram"></i>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="col-12 col-lg-9 copyright">
                         <p class="mb-0">
-                            Copyright &copy; 2019 Sapaguru.com. All Rights Reserved
+                            Copyright &copy; 2020 BUKOBUKU.com. All Rights Reserved
                         </p>
                     </div>
                 </div>

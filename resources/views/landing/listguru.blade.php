@@ -1,6 +1,6 @@
 @extends('layouts.user_dashboard')
 
-@section('title',"Sapaguru - Education Technology Startup")
+@section('title',"BUKOBUKU - Belajar Cepat, Belajar Hemat")
 
 @section('css')
     <style>
