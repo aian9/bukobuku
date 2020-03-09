@@ -6,7 +6,8 @@
             </a>
         </li> --}}
         <li class="nav-item">
-            <a href="{{route('about')}}" class="nav-link">
+            <a href="{{route('about')}}" class="btn btn-header hidden-sm hidden-xs" style="background:#a82932;-webkit-box-shadow: 0 0 20px #a829327a;
+            box-shadow: 0 0 20px #a829327a;margin-right: 20px">
                 <b>Tentang Kami</b>
             </a>
         </li>
@@ -18,6 +19,9 @@
             </a>
         </li>
         @endif --}}
+        
+
+        @if(Auth::user())
         @if(auth()->user()['tipe_akun']=='2')
         <li class="nav-item">
             <a href="{{route('user.dashboard.jadwal.act')}}" class="nav-link">
@@ -31,8 +35,6 @@
             </a>
         </li>
         @endif
-
-        @if(Auth::user())
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="profile-dropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <b>{{ \Auth::user()->username }}</b>  
@@ -79,11 +81,6 @@
         <li class="nav-item">
             <a class="btn btn-header hidden-sm hidden-xs" href="{{route('login')}}" style="margin-right: 20px">
                 Masuk
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="btn btn-header hidden-sm hidden-xs" href="{{route('register')}}" style="margin-right: 20px">
-                Daftar
             </a>
         </li>
         @endif

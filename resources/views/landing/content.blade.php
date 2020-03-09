@@ -33,7 +33,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-md-5 col-lg-6 col-sm-12 col-xs-12" style="margin-top:10px;">
-                            <img src="{{ asset('dist/assets/img/banner-image.png') }}" class="img-fluid px-3">
+                            <img src="{{ asset('img/banner-image.png') }}" class="img-fluid px-3">
                         </div>
                         <div class="col-md-7 col-lg-6 col-sm-12 col-xs-12">
                             <div class="welcome-text">
@@ -42,7 +42,8 @@
                                 </h1>
                                 <p>
                                     @if(!Auth::user())
-                                    Pencarian guru privat sesuai tipemu semakin mudah disini. Jadilah guru dan murid terbaik sekarang.
+                                    Pencarian guru privat sesuai tipemu semakin mudah disini. Jadilah guru dan murid terbaik sekarang.<br>
+                                    <i>"Ceria bersama mewujudkan mimpi"</i>
                                     @else
                                         @if(auth()->user()['tipe_akun']=='2')
                                         Mengajarlah dari hati, rileks dan jadikan muridmu seperti teman belajarmu.
@@ -55,7 +56,10 @@
                                 </p>
                                 @if(!Auth::user())
                                 <a href="{{route('register')}}" class="btn btn-primary lg" style="margin-top:20px;">
-                                    Daftar Sekarang
+                                    Daftar Sebagai Siswa
+                                </a>
+                                <a href="{{route('register')}}" class="btn btn-primary lg" style="margin-top:20px;">
+                                    Daftar Sebagai Guru
                                 </a>
                                 @endif
                             </div>
@@ -69,7 +73,7 @@
             
         </div>
 
-        @if(!Auth::user())
+        {{--  @if(!Auth::user())
         <section class="pb-0">
             <div class="text-center">
                 <div class="title text-center">
@@ -98,7 +102,7 @@
                 @endif
             </div>
         </section> <br><br><br>
-        @endif
+        @endif  --}}
         
         @include('landing.footer')
     </main>

@@ -100,7 +100,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="{{route('dashboard')}}">
-                    <img src="{{asset('dist/assets/img/logo/logo2.png') }}" srcset="{{ asset('dist/assets/img/logo/logo2.png 2x') }}" alt="logo">
+                    <img src="{{asset('dist/assets/img/logo/logo2.png') }}" srcset="{{ asset('dist/assets/img/logo/logo2.png 2x') }}" alt="logo" style="width:60px;">
                     <img src="{{asset('dist/assets/img/logo/logo2.png') }}" srcset="{{ asset('dist/assets/img/logo/logo2.png 2x') }}" alt="">
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
